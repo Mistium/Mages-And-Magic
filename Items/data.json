@@ -55,6 +55,55 @@
     "description": "",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/8!0.png"
   },
+  "9!0": {
+    "name": "Flint",
+    "recipe": "",
+    "tags": "Stone,component,Short",
+    "description": "",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/9!0.png"
+  },
+  "10!0": {
+    "name": "Sharpened Flint",
+    "recipe": "Flint,Weapon",
+    "tags": "Component,Stone,Short,Sharp",
+    "description": "",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/10!0.png"
+  },
+  "11!0": {
+    "name": "Flint Blade",
+    "recipe": "Sharpened Flint,Flint",
+    "tags": "Component,Stone,Sharp",
+    "description": "",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/11!0.png"
+  },
+  "12!0": {
+    "name": "Crossguard Base",
+    "recipe": "Flint,Stick",
+    "tags": "Short,Wooden",
+    "description": "",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/12!0.png"
+  },
+  "13!0": {
+    "name": "Wooden Crossguard",
+    "recipe": "Stick,Crossguard Base",
+    "tags": "Component,Wooden",
+    "description": "",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/13!0.png"
+  },
+  "14!0": {
+    "name": "Flint Crossguard",
+    "recipe": "Flint,Crossguard Base",
+    "tags": "Component,Stone",
+    "description": "",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/14!0.png"
+  },
+  "20!0": {
+    "name": "Sharpened Timber",
+    "recipe": "Timber,Weapon",
+    "tags": "Component,Stone,Short,Sharp",
+    "description": "",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/20!0.png"
+  },
   "1!1": {
     "name": "Wooden Dagger",
     "recipe": "Wooden Handle,Sharpened Timber",
