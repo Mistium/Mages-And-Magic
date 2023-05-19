@@ -100,17 +100,43 @@
       "name": "Wooden Armour",
       "recipe": "Armour Base,Timber",
       "tags": "wooden,armour",
-      "description": "",
+      "description": "A heavy but durable /n set of armour",
       "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!2.png",
-      "armour": 2
+      "armour": 2,
+      "speed": -2
     },
     "2!2": {
       "name": "Stone Armour",
       "recipe": "Armour Base,Rock",
       "tags": "stone,armour",
-      "description": "",
+      "description": "A very heavy but /n protective armour",
       "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/2!2.png",
-      "armour": 2
+      "armour": 5,
+      "speed": -5
+    },
+    "3!2": {
+      "name": "Rusted Armour",
+      "recipe": "Armour Base,Scrap",
+      "tags": "stone,armour",
+      "description": "A lightweight but /n not protective armour",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/3!2.png",
+      "armour": 3
+    },
+    "4!2": {
+      "name": "Iron Armour",
+      "recipe": "Armour Base,Iron",
+      "tags": "stone,armour",
+      "description": "A lightweight and /n protective armour",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/4!2.png",
+      "armour": 7
+    },
+    "9!2": {
+      "name": "Wizard's Robe",
+      "recipe": "Armour Base,Iron",
+      "tags": "stone,armour",
+      "description": "A robe that /n increases your /n magic damage",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/9!2.png",
+      "passive": "status @s affinity 5 hidden"
     }
   },
   "Item": {
@@ -118,7 +144,7 @@
       "name": "Torch",
       "recipe": "stick,charcoal",
       "description": "A torch that allows /n you to see further /n in the dark",
-      "passive": "Status @s Vision 5 Hidden",
+      "passive": "status @s vision 5 hidden",
       "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!3.png"
     },
     "2!3": {
@@ -140,7 +166,7 @@
       "name": "Wooden Bow",
       "recipe": "stick,charcoal",
       "description": "A simple bow crafted /n after going to /n timpo island",
-      "damage":2,
+      "damage": 2,
       "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!4.png"
     },
     "2!4": {
@@ -148,7 +174,7 @@
       "recipe": "stick,charcoal",
       "description": "A simple bow crafted /n after going to /n timpo island",
       "damage": "3",
-      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!4.png"
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/2!4.png"
     }
   },
   "Food": {
@@ -156,15 +182,94 @@
       "name": "Apple",
       "recipe": "",
       "description": "Eat this item by /n clicking with it in /n your primary hotbar /n slot",
-      "food":1,
+      "food": 1,
       "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!5.png"
     },
     "2!5": {
       "name": "Fish",
       "recipe": "",
       "description": "Eat this item by /n clicking with it in /n your primary hotbar /n slot",
-      "food":3,
-      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!5.png"
+      "food": 3,
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/2!5.png"
+    }
+  },
+  "Placable": {
+    "1!6": {
+      "name": "Workbench",
+      "recipe": "",
+      "description": "Place this object in /n your home to unlock /n advanced crafting",
+      "type": "Workbench",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!6.png"
+    },
+    "2!6": {
+      "name": "Saw Blade",
+      "recipe": "",
+      "description": "Place this object in /n your home to unlock /n wood refinement",
+      "type": "Workbench",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!6.png"
+    },
+    "3!6": {
+      "name": "Enchanter",
+      "recipe": "",
+      "description": "Place this object to /n add buffs to your /n items",
+      "type": "Workbench",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!6.png"
+    },
+    "4!6": {
+      "name": "Pet Summoner",
+      "recipe": "",
+      "description": "Place this object to /n unlock pets",
+      "type": "Workbench",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!6.png"
+    },
+    "5!6": {
+      "name": "Bed",
+      "recipe": "",
+      "description": "Place this object to /n be able to sleep /n through the night",
+      "type": "Workbench",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!6.png"
+    },
+    "6!6": {
+      "name": "Small Rug",
+      "recipe": "",
+      "description": "Add a soft touch to /n your home",
+      "type": "No-colide",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/6!6.png"
+    },
+    "7!6": {
+      "name": "Long Rug",
+      "recipe": "",
+      "description": "Add a soft touch to /n your home",
+      "type": "No-colide",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/7!6.png"
+    },
+    "8!6": {
+      "name": "Large Rug",
+      "recipe": "",
+      "description": "Add a soft touch to /n your home",
+      "type": "No-colide",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/8!6.png"
+    },
+    "9!6": {
+      "name": "Fire Place",
+      "recipe": "",
+      "description": "Add a cosy fireplace /n to your home",
+      "type": "Colide",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/9!6.png"
+    },
+    "10!6": {
+      "name": "Chair",
+      "recipe": "",
+      "description": "Add a spot for you /n to sit down",
+      "type": "Chair",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/10!6.png"
+    },
+    "11!6": {
+      "name": "Sofa/Couch",
+      "recipe": "",
+      "description": "Add a spot for you /n to sit down",
+      "type": "Chair",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/11!6.png"
     }
   },
   "Spear": {
@@ -176,6 +281,13 @@
       "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!7.png",
       "damage": 1,
       "slashsize": 600
+    }
+  },
+  "Skill Cards": {
+    "1!8": {
+      "name": "Dash",
+      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!8.png",
+      "skill": "Dash"
     }
   }
 }
