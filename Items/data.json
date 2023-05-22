@@ -142,6 +142,13 @@
     "description": "A simple handle",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/16!0.png"
   },
+  "17!0": {
+    "name": "Slime Gel",
+    "recipe": "",
+    "tags": "Sticky,Enemydrop",
+    "description": "Dropped by slimes /n when killed",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/17!0.png"
+  },
   "19!0": {
     "name": "Handle Base",
     "recipe": "Stick,Weapon",
