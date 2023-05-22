@@ -1,4 +1,31 @@
 {
+  "recipes": {
+    "1!0": {
+      "weapon": "19!0"
+    },
+    "3!0": {
+      "weapon": "4!0"
+    },
+    "4!0": {
+      "0": "1!0",
+      "4!0": "5!0",
+      "19!1": "15!0"
+    },
+    "6!0": {
+      "1!0": "7!0"
+    },
+    "7!0": {
+      "1!0": "8!0",
+      "10!0": "1!7"
+    },
+    "9!0": {
+      "9!0": "2!0",
+      "weapon": "10!0"
+    },
+    "10!0": {
+      "9!0": "11!0"
+    }
+  },
   "1!0": {
     "name": "Stick",
     "recipe": "timber,",
@@ -42,24 +69,24 @@
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/6!0.png"
   },
   "7!0": {
-    "name": "Very Long Stick",
-    "recipe": "stick,stick",
+    "name": "Longer Stick",
+    "recipe": "Long stick,stick",
     "tags": "pole,component,wooden,very-long,blunt",
     "description": "",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/7!0.png"
   },
   "8!0": {
     "name": "Very Long Stick",
-    "recipe": "stick,stick",
+    "recipe": "Longer stick,stick",
     "tags": "pole,component,wooden,very-long,blunt",
-    "description": "",
+    "description": "Make spears",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/8!0.png"
   },
   "9!0": {
     "name": "Flint",
     "recipe": "",
     "tags": "Stone,component,Short",
-    "description": "",
+    "description": "Craft this with a weapon to sharpen it",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/9!0.png"
   },
   "10!0": {
@@ -76,6 +103,13 @@
     "description": "",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/11!0.png"
   },
+  "12!0": {
+    "name": "Crossguard Base",
+    "recipe": "Flint,Stick",
+    "tags": "Short,Wooden",
+    "description": "Combine with /n Timber/Flint to create a /n crossguard",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/12!0.png"
+  },
   "13!0": {
     "name": "Wooden Crossguard",
     "recipe": "Stick,Crossguard Base",
@@ -87,14 +121,21 @@
     "name": "Flint Crossguard",
     "recipe": "Flint,Crossguard Base",
     "tags": "Component,Stone",
-    "description": "",
+    "description": "A strong crossguard",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/14!0.png"
   },
-  "19!0": {
-    "name": "Crossguard Base",
-    "recipe": "Flint,Stick",
+  "15!0": {
+    "name": "Wooden Handle",
+    "recipe": "Handle base,timber",
     "tags": "Short,Wooden",
-    "description": "",
+    "description": "A basic handle",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/15!0.png"
+  },
+  "19!0": {
+    "name": "Handle Base",
+    "recipe": "Stick,Weapon",
+    "tags": "Short",
+    "description": "Combine with /n Timber/Flint to create a /n handle",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/19!0.png"
   },
   "20!0": {
@@ -309,18 +350,16 @@
   },
   "1!7": {
     "name": "Flint Spear",
-    "recipe": "Wooden Handle,Sharpened Flint",
+    "recipe": "Longer Stick,Sharpened Flint",
     "tags": "pole,thin,component,wooden,blunt,short",
     "description": "A flint dagger on /n a long stick",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!7.png",
     "damage": 1,
     "slashsize": 600
   },
-  "Skill Cards": {
-    "1!8": {
-      "name": "Dash",
-      "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!8.png",
-      "skill": "Dash"
-    }
+  "1!8": {
+    "name": "Dash",
+    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/1!8.png",
+    "skill": "Dash"
   }
 }
