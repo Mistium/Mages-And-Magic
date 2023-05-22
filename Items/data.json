@@ -135,7 +135,7 @@
     "name": "Handle Base",
     "recipe": "Stick,Weapon",
     "tags": "Short",
-    "description": "Combine with /n Timber/Flint to create a /n handle",
+    "description": "Combine with /n Timber/Flint to /n create a handle",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/19!0.png"
   },
   "20!0": {
