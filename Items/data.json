@@ -90,7 +90,7 @@
     "name": "Flint",
     "recipe": "",
     "tags": "Stone,component,Short,material",
-    "description": "Craft this with a weapon to sharpen it",
+    "description": "Craft this with a /n weapon to sharpen it",
     "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/flint.png"
   },
   "10!0": {
