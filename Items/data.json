@@ -35,147 +35,147 @@
     "recipe": "timber,0",
     "tags": "pole,thin,component,wooden,blunt,short",
     "description": "A simple item, /n gathered from trees",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/stick.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/stick.png"
   },
   "2!0": {
     "name": "Rock",
     "recipe": "flint,flint",
     "tags": "stone,component,blunt,short",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/rock.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/rock.png"
   },
   "3!0": {
     "name": "Log",
     "recipe": "",
     "tags": "thick,component,wooden,blunt,short",
     "description": "Gathered from trees",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/log.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/log.png"
   },
   "4!0": {
     "name": "Timber",
     "recipe": "log,weapon",
     "tags": "thick,wooden,blunt,short",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/timber.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/timber.png"
   },
   "5!0": {
     "name": "Wood",
     "recipe": "timber,timber",
     "tags": "thick,wooden,blunt,short",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wood.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wood.png"
   },
   "6!0": {
     "name": "Long Stick",
     "recipe": "stick,stick",
     "tags": "pole,component,wooden,blunt",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/long-stick.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/long-stick.png"
   },
   "7!0": {
     "name": "Longer Stick",
     "recipe": "Long stick,stick",
     "tags": "pole,component,wooden,very-long,blunt",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/longer-stick.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/longer-stick.png"
   },
   "8!0": {
     "name": "Very Long Stick",
     "recipe": "Longer stick,stick",
     "tags": "pole,component,wooden,very-long,blunt",
     "description": "Make spears",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/very-long-stick.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/very-long-stick.png"
   },
   "9!0": {
     "name": "Flint",
     "recipe": "",
     "tags": "Stone,component,Short,material",
     "description": "Craft this with a /n weapon to sharpen it",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/flint.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/flint.png"
   },
   "10!0": {
     "name": "Sharpened Flint",
     "recipe": "Flint,Weapon",
     "tags": "Component,Stone,Short,Sharp",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/sharpened-flint.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/sharpened-flint.png"
   },
   "11!0": {
     "name": "Flint Blade",
     "recipe": "Sharpened Flint,Flint",
     "tags": "Component,Stone,Sharp",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/flint-blade.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/flint-blade.png"
   },
   "12!0": {
     "name": "Crossguard Base",
     "recipe": "Flint,Stick",
     "tags": "Short,Wooden",
     "description": "Combine with /n Timber/Flint to create a /n crossguard",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/crossguard-base.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/crossguard-base.png"
   },
   "13!0": {
     "name": "Wooden Crossguard",
     "recipe": "Stick,Crossguard Base",
     "tags": "Component,Wooden",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wooden-crossguard.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wooden-crossguard.png"
   },
   "14!0": {
     "name": "Flint Crossguard",
     "recipe": "Flint,Crossguard Base",
     "tags": "Component,Stone",
     "description": "A strong crossguard",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/flint-crossguard.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/flint-crossguard.png"
   },
   "15!0": {
     "name": "Wooden Handle",
     "recipe": "Handle base,timber",
     "tags": "Short,Wooden",
     "description": "A basic handle",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wooden-handle.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wooden-handle.png"
   },
   "16!0": {
     "name": "Flint Handle",
     "recipe": "Handle base,flint",
     "tags": "Short,Stone",
     "description": "A simple handle",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/flint-handle.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/flint-handle.png"
   },
   "17!0": {
     "name": "Slime Gel",
     "recipe": "",
     "tags": "Sticky,Enemydrop,material",
     "description": "Dropped by slimes /n when killed",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/slime-gel.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/slime-gel.png"
   },
   "19!0": {
     "name": "Handle Base",
     "recipe": "Stick,Weapon",
     "tags": "Short",
     "description": "Combine with /n Timber/Flint to /n create a handle",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/handle-base.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/handle-base.png"
   },
   "20!0": {
     "name": "Sharpened Timber",
     "recipe": "Timber,Weapon",
     "tags": "Component,Stone,Short,Sharp",
     "description": "",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/sharpened-timber.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/sharpened-timber.png"
   },
     "21!0": {
     "name": "Scrap",
     "recipe": "",
     "tags": "metal,material",
     "description": "Unrefined iron",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/scrap.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/scrap.png"
   },
   "1!1": {
     "name": "Wooden Dagger",
     "recipe": "Wooden Handle,Sharpened Timber",
     "tags": "pole,thin,component,wooden,blunt,short",
     "description": "A simple but robust /n dagger",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wooden-dagger.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wooden-dagger.png",
     "damage": 0.5,
     "slashsize": 500
   },
@@ -184,7 +184,7 @@
     "recipe": "Wooden Handle,Timber Blade",
     "tags": "pole,thin,component,wooden,blunt,short",
     "description": "A normal sword for /n normal players",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wooden-sword.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wooden-sword.png",
     "damage": 0.5,
     "slashsize": 600
   },
@@ -193,7 +193,7 @@
     "recipe": "Wooden Handle,Long Timber Blade",
     "tags": "pole,thin,component,wooden,blunt,short",
     "description": "A long sword with /n a bigger reach but made /n from wood",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wooden-long-sword.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wooden-long-sword.png",
     "damage": 0.5,
     "slashsize": 600
   },
@@ -202,7 +202,7 @@
     "recipe": "Wooden Handle,Sharpened Flint",
     "tags": "pole,thin,component,wooden,blunt,short",
     "description": "A simple dagger /n made of flint",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/flint-dagger.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/flint-dagger.png",
     "damage": 1,
     "slashsize": 600
   },
@@ -211,7 +211,7 @@
     "recipe": "Armour Base,Timber",
     "tags": "wooden,armour",
     "description": "A heavy but durable /n set of armour",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wooden-armour.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wooden-armour.png",
     "armour": 2,
     "speed": -2
   },
@@ -220,7 +220,7 @@
     "recipe": "Armour Base,Rock",
     "tags": "stone,armour",
     "description": "A very heavy but /n protective armour",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/stone-armour.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/stone-armour.png",
     "armour": 5,
     "speed": -5
   },
@@ -229,7 +229,7 @@
     "recipe": "Armour Base,Scrap",
     "tags": "stone,armour",
     "description": "A lightweight but /n not protective armour",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/rusted-armour.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/rusted-armour.png",
     "armour": 3
   },
   "4!2": {
@@ -237,7 +237,7 @@
     "recipe": "Armour Base,Iron",
     "tags": "stone,armour",
     "description": "A lightweight and /n protective armour",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/iron-armour.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/iron-armour.png",
     "armour": 7
   },
   "9!2": {
@@ -245,7 +245,7 @@
     "recipe": "Armour Base,Iron",
     "tags": "stone,armour",
     "description": "A robe that /n increases your /n magic damage",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wizards-robe.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wizards-robe.png",
     "passive": "status @s affinity 5 hidden"
   },
   "10!2": {
@@ -253,145 +253,145 @@
     "recipe": "Armour Base,Slime Gel",
     "tags": "stone,armour",
     "description": "A robe covered /n in slime",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/slime-robe.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/slime-robe.png"
   },
   "1!3": {
     "name": "Torch",
     "recipe": "stick,charcoal",
     "description": "A torch that allows /n you to see further /n in the dark",
     "passive": "status @s vision 5 hidden",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/torch.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/torch.png"
   },
   "2!3": {
     "name": "Shrine Heart",
     "recipe": "",
     "description": "An ancient artifact /n found in the shrines /n on every island",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/shrine-heart.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/shrine-heart.png"
   },
   "3!3": {
     "name": "Clock",
     "recipe": "",
     "description": "This Item shows you /n the current time by /n rotating like a /n normal analog clock",
     "display": "time",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/clock.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/clock.png"
   },
   "1!4": {
     "name": "Wooden Bow",
     "recipe": "stick,charcoal",
     "description": "A simple bow crafted /n after going to /n timpo island",
     "damage": 2,
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/wooden-bow.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/wooden-bow.png"
   },
   "2!4": {
     "name": "Rusted Bow",
     "recipe": "stick,charcoal",
     "description": "A simple bow crafted /n after going to /n timpo island",
     "damage": "3",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/rusted-bow.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/rusted-bow.png"
   },
   "1!5": {
     "name": "Apple",
     "recipe": "",
     "description": "Eat this item by /n clicking with it in /n your primary hotbar /n slot",
     "food": 1,
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/apple.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/apple.png"
   },
   "2!5": {
     "name": "cod",
     "recipe": "",
     "description": "Eat this item by /n clicking with it in /n your primary hotbar /n slot",
     "food": 3,
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/cod.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/cod.png"
   },
   "1!6": {
     "name": "Workbench",
     "recipe": "",
     "description": "Place this object in /n your home to unlock /n advanced crafting",
     "type": "Workbench",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/workbench.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/workbench.png"
   },
   "2!6": {
     "name": "Saw Blade",
     "recipe": "",
     "description": "Place this object in /n your home to unlock /n wood refinement",
     "type": "Workbench",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/saw-blade.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/saw-blade.png"
   },
   "3!6": {
     "name": "Enchanter",
     "recipe": "",
     "description": "Place this object to /n add buffs to your /n items",
     "type": "Workbench",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/enchanter.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/enchanter.png"
   },
   "4!6": {
     "name": "Pet Summoner",
     "recipe": "",
     "description": "Place this object to /n unlock pets",
     "type": "Workbench",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/pet-summoner.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/pet-summoner.png"
   },
   "5!6": {
     "name": "Bed",
     "recipe": "",
     "description": "Place this object to /n be able to sleep /n through the night",
     "type": "Workbench",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/bed.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/bed.png"
   },
   "6!6": {
     "name": "Small Rug",
     "recipe": "",
     "description": "Add a soft touch to /n your home",
     "type": "No-colide",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/small-rug.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/small-rug.png"
   },
   "7!6": {
     "name": "Long Rug",
     "recipe": "",
     "description": "Add a soft touch to /n your home",
     "type": "No-colide",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/long-rug.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/long-rug.png"
   },
   "8!6": {
     "name": "Large Rug",
     "recipe": "",
     "description": "Add a soft touch to /n your home",
     "type": "No-colide",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/large-rug.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/large-rug.png"
   },
   "9!6": {
     "name": "Fire Place",
     "recipe": "",
     "description": "Add a cosy fireplace /n to your home",
     "type": "Colide",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/fire-place.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/fire-place.png"
   },
   "10!6": {
     "name": "Chair",
     "recipe": "",
     "description": "Add a spot for you /n to sit down",
     "type": "Chair",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/chair.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/chair.png"
   },
   "11!6": {
     "name": "Sofa/Couch",
     "recipe": "",
     "description": "Add a spot for you /n to sit down",
     "type": "Chair",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/sofa-couch.png"
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/sofa-couch.png"
   },
   "1!7": {
     "name": "Flint Spear",
     "recipe": "Longer Stick,Sharpened Flint",
     "tags": "pole,thin,component,wooden,blunt,short",
     "description": "A flint dagger on /n a long stick",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/flint-spear.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/flint-spear.png",
     "damage": 1,
     "slashsize": 600
   },
   "1!8": {
     "name": "Dash",
-    "image": "https://mystium-yt.github.io/Mages-And-Magic/Items/Images/dash.png",
+    "image": "https://mistium.github.io/Mages-And-Magic/Items/Images/dash.png",
     "skill": "Dash"
   }
 }
