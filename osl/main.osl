@@ -85,7 +85,7 @@ mainloop:
 direction 90
 stretch "x" 100
 goto player_x * screen_zoom player_y * screen_zoom
-image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/islands/hetrem/island.png" 14000 * screen_zoom
+image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/islands/hetrem/island.png" 17006 * screen_zoom
 
 player_animate
 player_movement
@@ -95,7 +95,9 @@ stretch "x" player_stretch_x
 direction dir
 image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/players/0.png".str 50 * screen_zoom
 
-loc 2 -2 100 50
-image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/user-interface/interactable/hotbar.png" 100
+direction 90
+stretch "x" 100
+loc 2 -2 80 45
+image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/user-interface/interactable/hotbar.png" 154
 
 import "win-buttons"
