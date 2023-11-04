@@ -96,6 +96,6 @@ direction dir
 image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/players/0.png".str 50 * screen_zoom
 
 loc 2 -2 100 50
-image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/user_interface/interactable/hotbar.png" 100
+image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/user-interface/interactable/hotbar.png" 100
 
 import "win-buttons"
