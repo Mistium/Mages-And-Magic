@@ -1,3 +1,60 @@
-goto 0 0
+key_up = "w"
+key_down = "s"
+key_right = "d"
+key_left = "a"
 
+screen_zoom = 1
+
+player_x = 0
+player_y = 0
+
+target_stretch = -100
+player_stretch_x = -100
+player_speed_modifier = 1
+
+def "player_animate"
+
+    if key_left.pressed and key_right.pressed.not (
+        direction = "a"
+        target_stretch = 100
+    )
+
+    if key_right.pressed and key_left.pressed.not (
+        direction = "d"
+        target_stretch = -100
+    )
+
+    if target_stretch > 0 (
+        player_stretch_x += target_stretch - player_speed_modifier - player_stretch_x / 5
+    )
+    
+    if target_stretch < 0 (
+        player_stretch_x += target_stretch + player_speed_modifier - player_stretch_x / 5
+    )
+
+    dir = 90
+
+    if key_up.pressed or key_down.pressed or key_left.pressed or key_right.pressed (
+        dir = ( timer - 3 * 500 )
+        dir = dir.cos * 2.5 + 90
+    )
+
+endef
+
+def "player_movement"
+
+endef
+
+mainloop:
+
+goto player_x * screen_zoom player_y * screen_zoom
+image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/islands/hetrem/island.png" 2000 * screen_zoom
+
+player_animate
+player_movement
+
+goto 0 0
+stretch "x" player_stretch_x
+direction dir
+image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/players/0.png".str 50 * screen_zoom
 import "win-buttons"
