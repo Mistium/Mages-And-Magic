@@ -2,15 +2,19 @@ key_up = "w"
 key_down = "s"
 key_right = "d"
 key_left = "a"
+key_sprint = "shift"
 
 screen_zoom = 1
 
 player_x = 0
 player_y = 0
+player_speed = 7
+player_can_move = true
 
 target_stretch = -100
 player_stretch_x = -100
 player_speed_modifier = 1
+player_direction = 90
 
 def "player_animate"
 
@@ -22,6 +26,20 @@ def "player_animate"
     if key_right.pressed and key_left.pressed.not (
         direction = "d"
         target_stretch = -100
+    )
+
+    if key_right.pressed "player_direction = 90"
+    if key_left.pressed "player_direction = -90"
+
+    if key_up.pressed and key_down.pressed.not (
+        player_direction = 0
+        if key_left.pressed "player_direction -= 45"
+        if key_right.pressed "player_direction += 45"
+    )
+    if key_down.pressed and key_up.pressed.not (
+        player_direction = 180
+        if key_left.pressed "player_direction += 45"
+        if key_right.pressed "player_direction -= 45"
     )
 
     if target_stretch > 0 (
@@ -42,13 +60,32 @@ def "player_animate"
 endef
 
 def "player_movement"
-
+    player_speed = 7
+    if key_sprint.pressed (
+        player_speed = 10
+    )
+    if ( key_left.pressed and key_right.pressed.not ) or ( key_left.pressed.not and key_right.pressed ) (
+        player_x_vel += player_direction.sin * player_speed * -0.5
+    )
+    if ( key_up.pressed and key_down.pressed.not ) or ( key_up.pressed.not and key_down.pressed ) (
+        player_y_vel += player_direction.cos * player_speed * -0.5
+    )
+    player_x_vel *= 0.6
+    player_y_vel *= 0.6
+    last_x = player_x
+    last_y = player_y
+    if player_can_move (
+        player_x += player_x_vel
+        player_y += player_y_vel
+    )
 endef
 
 mainloop:
 
+direction 90
+stretch "x" 100
 goto player_x * screen_zoom player_y * screen_zoom
-image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/islands/hetrem/island.png" 2000 * screen_zoom
+image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/islands/hetrem/island.png" 14000 * screen_zoom
 
 player_animate
 player_movement
