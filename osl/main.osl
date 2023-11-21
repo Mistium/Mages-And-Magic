@@ -4,20 +4,45 @@ key_right = "d"
 key_left = "a"
 key_sprint = "shift"
 
+window "dimensions" 1400 900
 screen_zoom = 1
 
-player_x = 0
-player_y = 0
-player_speed = 7
-player_can_move = true
+github = "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/"
 
-target_stretch = -100
-player_stretch_x = -100
-player_speed_modifier = 1
+def "new_game"
+inventory = "40".new("array")
+
+player_x = 2000
+player_y = 2200
+
 player_direction = 90
+player_speed_modifier = 1
+player_stretch_x = -100
+target_stretch = -100
+
+player_can_move = true
+player_speed = 7
+
+current_island = "hetrem"
+endef
+
+def "travel" "target_island,travel_x,travel_y"
+current_island = target_island
+player_x = travel_x
+player_y = travel_y
+endef
+
+def "player_collide"
+hitbox "show"
+if current_island == "hetrem" (
+goto camx camy
+change -2400 * screen_zoom -2300 * screen_zoom
+hitbox 200 500 0 0
+if collided "travel "cave of the lost" 0 0"
+)
+endef
 
 def "player_animate"
-
     if key_left.pressed and key_right.pressed.not (
         direction = "a"
         target_stretch = 100
@@ -42,13 +67,7 @@ def "player_animate"
         if key_right.pressed "player_direction -= 45"
     )
 
-    if target_stretch > 0 (
-        player_stretch_x += target_stretch - player_speed_modifier - player_stretch_x / 5
-    )
-    
-    if target_stretch < 0 (
-        player_stretch_x += target_stretch + player_speed_modifier - player_stretch_x / 5
-    )
+    player_stretch_x += target_stretch - player_speed_modifier - player_stretch_x / 5
 
     dir = 90
 
@@ -74,30 +93,46 @@ def "player_movement"
     player_y_vel *= 0.6
     last_x = player_x
     last_y = player_y
+    player_collide
     if player_can_move (
         player_x += player_x_vel
         player_y += player_y_vel
     )
 endef
 
+def "main"
+    direction 90
+    stretch "x" 100
+    camx = player_x * screen_zoom
+    camy = player_y * screen_zoom
+    goto camx camy
+    image github ++ "assets/islands/" ++ current_island ++ "/island.png" 17006 * screen_zoom
+
+    player_animate
+    player_movement
+
+    goto 0 0
+    stretch "x" player_stretch_x
+    direction dir
+    image github ++ "assets/players/0.png".str 50 * screen_zoom
+
+    
+endef
+
+def "render_ui"
+    direction 90
+    stretch "x" 100
+    loc 2 -2 80 45
+    image github ++ "assets/user-interface/interactable/hotbar.png" 154
+    loc -2 2 -20 -20
+    image github ++ "assets/user-interface/interactable/maximised.svg" 154
+endef
+
+new_game
+
 mainloop:
 
-direction 90
-stretch "x" 100
-goto player_x * screen_zoom player_y * screen_zoom
-image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/islands/hetrem/island.png" 17006 * screen_zoom
-
-player_animate
-player_movement
-
-goto 0 0
-stretch "x" player_stretch_x
-direction dir
-image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/players/0.png".str 50 * screen_zoom
-
-direction 90
-stretch "x" 100
-loc 2 -2 80 45
-image "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/assets/user-interface/interactable/hotbar.png" 154
+main
+render_ui
 
 import "win-buttons"
