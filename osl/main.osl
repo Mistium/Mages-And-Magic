@@ -24,6 +24,10 @@ player_can_move = true
 player_speed = 7
 
 current_island = "hetrem"
+max_hp = 5
+hp = 5
+xp = 0 
+player_level = 0
 endef
 
 def "travel" "target_island,travel_x,travel_y"
@@ -33,7 +37,6 @@ player_y = travel_y
 endef
 
 def "player_collide"
-hitbox "show"
 if current_island == "hetrem" (
 goto camx camy
 change -2400 * screen_zoom -2300 * screen_zoom
@@ -124,13 +127,31 @@ def "render_ui"
     stretch "x" 100
     loc 2 -2 80 45
     image github ++ "assets/user-interface/interactable/hotbar.png" 154
-    loc -2 2 -100 -100
+    loc -2 2 -155 -105
     if guild_mini (
         image github ++ "assets/user-interface/interactable/Maximised.svg" 300
     )
+    change_y 51.5
     if guild_mini.not (
         image github ++ "assets/user-interface/interactable/Minimised.svg" 300
     )
+    square 300 100 10 1 1
+if clicked and can (
+can = false
+guild_mini = guild_mini.not
+)
+loc -2 2 -290 -25
+text username 10 : c#000
+loc -2 2 -280 -65
+text player_level 15
+c #916a3e
+loc -2 2 -128 -50
+bar 203 20 0 hp / max_hp
+
+max_xp = player_level + 5 * 30
+loc -2 2 -128 -77
+bar 203 20 0 xp / max_xp
+
 endef
 
 new_game
@@ -139,5 +160,5 @@ mainloop:
 
 main
 render_ui
-
+if mouse_down.not "can = true"
 import "win-buttons"
