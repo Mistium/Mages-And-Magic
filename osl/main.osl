@@ -4,6 +4,7 @@ key_right = "d"
 key_left = "a"
 key_sprint = "shift"
 
+window "show"
 window "dimensions" 1400 900
 screen_zoom = 1
 
@@ -124,8 +125,16 @@ def "render_ui"
     stretch "x" 100
     loc 2 -2 80 45
     image github ++ "assets/user-interface/interactable/hotbar.png" 154
-    loc -2 2 -20 -20
-    image github ++ "assets/user-interface/interactable/maximised.svg" 154
+    loc -2 2 -160 -110
+    if minimised (
+         image github ++ "assets/user-interface/interactable/Maximised.svg" 300
+    )
+    if minimised.not (
+    
+    )
+    if clicked (
+        minimised = minimised.not
+    )
 endef
 
 new_game
@@ -134,5 +143,3 @@ mainloop:
 
 main
 render_ui
-
-import "win-buttons"
