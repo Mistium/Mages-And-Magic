@@ -7,10 +7,12 @@ key_sprint = "shift"
 window "dimensions" 1400 900
 screen_zoom = 1
 
-github = "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/osl/"
+github = "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/"
 
 def "new_game"
 inventory = "40".new("array")
+inventory.[1] = "stick"
+current_slot = 1
 
 player_x = 2000
 player_y = 2200
@@ -34,6 +36,15 @@ def "travel" "target_island,travel_x,travel_y"
 current_island = target_island
 player_x = travel_x
 player_y = travel_y
+endef
+
+def "probar" "width,height,rounding,percent,fill_colour"
+square width height rounding
+if percent != 0 (
+change width / -2
+change width * percent / 2
+square width * percent height rounding : c#fill_colour
+)
 endef
 
 def "player_collide"
@@ -109,7 +120,7 @@ def "main"
     camx = player_x * screen_zoom
     camy = player_y * screen_zoom
     goto camx camy
-    image github ++ "assets/islands/" ++ current_island ++ "/island.png" 17006 * screen_zoom
+    image github ++ "osl/assets/islands/" ++ current_island ++ "/island.png" 17006 * screen_zoom
 
     player_animate
     player_movement
@@ -117,8 +128,9 @@ def "main"
     goto 0 0
     stretch "x" player_stretch_x
     direction dir
-    image github ++ "assets/players/0.png".str 50 * screen_zoom
-
+    image github ++ "osl/assets/players/0.png".str 50 * screen_zoom
+    change 30 * screen_zoom
+    image github ++ "Items/Images/" ++ inventory.[current_slot] ++ ".png" 30
     
 endef
 
@@ -126,14 +138,14 @@ def "render_ui"
     direction 90
     stretch "x" 100
     loc 2 -2 80 45
-    image github ++ "assets/user-interface/interactable/hotbar.png" 154
+    image github ++ "osl/assets/user-interface/interactable/hotbar.png" 154
     loc -2 2 -155 -105
     if guild_mini (
-        image github ++ "assets/user-interface/interactable/Maximised.svg" 300
+        image github ++ "osl/assets/user-interface/interactable/Maximised.svg" 300
     )
     change_y 51.5
     if guild_mini.not (
-        image github ++ "assets/user-interface/interactable/Minimised.svg" 300
+        image github ++ "osl/assets/user-interface/interactable/Minimised.svg" 300
     )
     square 300 100 10 1 1
 if clicked and can (
@@ -144,14 +156,18 @@ loc -2 2 -290 -25
 text username 10 : c#000
 loc -2 2 -280 -65
 text player_level 15
-c #916a3e
+c #92683e
 loc -2 2 -128 -50
-bar 203 20 0 hp / max_hp
+probar 203 20 0 hp / max_hp #d14b41
+loc -2 2 -224 -50
+text "Hp" + hp ++ "/" ++ max_hp 10 : c#000
 
 max_xp = player_level + 5 * 30
 loc -2 2 -128 -77
-bar 203 20 0 xp / max_xp
-
+c #92683e
+probar 203 20 0 xp / max_xp #d1cc41
+loc -2 2 -224 -77
+text "Xp" + xp ++ "/" ++ max_xp 10 : c#000
 endef
 
 new_game
@@ -160,5 +176,6 @@ mainloop:
 
 main
 render_ui
+
 if mouse_down.not "can = true"
 import "win-buttons"
