@@ -4,18 +4,20 @@ key_right = "d"
 key_left = "a"
 key_sprint = "shift"
 
-window "dimensions" 1400 900
-screen_zoom = 1
+window "dimensions" 1200 800
+window "show"
+window "maximise"
 
 github = "https://raw.githubusercontent.com/Mistium/Mages-And-Magic/main/"
 
+def "position" "x_pos,y_pos"
+goto x_pos * screen_zoom y_pos * screen_zoom
+endef
+
 def "new_game"
-  inventory = "40".new("array")
+  inventory = "array".new(40)
   inventory.[1] = "stick"
   current_slot = 1
-
-  player_x = 2000
-  player_y = 2200
 
   player_direction = 90
   player_speed_modifier = 1
@@ -25,11 +27,11 @@ def "new_game"
   player_can_move = true
   player_speed = 7
 
-  current_island = "hetrem"
   max_hp = 5
   hp = 5
-  xp = 0 
+  xp = 0
   player_level = 0
+  travel "cave of the lost" 1500 1500
 endef
 
 def "travel" "target_island,travel_x,travel_y"
@@ -48,11 +50,20 @@ def "probar" "width,height,rounding,percent,fill_colour"
 endef
 
 def "player_collide"
+  c #fff
+  if current_island == "cave of the lost" (
+    position player_x + 1000 player_y - 2600
+    hitbox 200 * screen_zoom 500 * screen_zoom 0 0
+    if collided (
+      travel "hetrem" 2200 2400
+    )
+  )
   if current_island == "hetrem" (
-    goto camx camy
-    change -2400 * screen_zoom -2300 * screen_zoom
-    hitbox 200 500 0 0
-    if collided "travel "cave of the lost" 0 0"
+    position player_x - 2400 player_y - 2400
+    hitbox 200 * screen_zoom 500 * screen_zoom 0 0
+    if collided (
+     travel "cave of the lost" -900 2600
+    )
   )
 endef
 
@@ -93,13 +104,14 @@ def "player_animate"
 endef
 
 def "player_movement"
-  if key_sprint.pressed "player_speed = 10" else "player_speed = 7"
+  if key_sprint.pressed "player_speed = 16" else "player_speed = 12"
   if ( key_left.pressed and key_right.pressed.not ) or ( key_left.pressed.not and key_right.pressed ) (
     player_x_vel += player_direction.sin * player_speed * -0.5
   )
   if ( key_up.pressed and key_down.pressed.not ) or ( key_up.pressed.not and key_down.pressed ) (
     player_y_vel += player_direction.cos * player_speed * -0.5
   )
+  smooth_dir += player_direction - smooth_dir / 15
   player_x_vel *= 0.6
   player_y_vel *= 0.6
   last_x = player_x
@@ -114,10 +126,10 @@ endef
 def "main"
   direction 90
   stretch "x" 100
-  camx = player_x * screen_zoom
-  camy = player_y * screen_zoom
-  goto camx camy
-  image github ++ "osl/assets/islands/" ++ current_island ++ "/island.png" 17006 * screen_zoom
+  position player_x player_y
+  stretch "x" 100
+  stretch "y" 100
+  image github ++ "osl/assets/islands/" ++ current_island ++ "/island.png" 18000 * screen_zoom
 
   player_animate
   player_movement
@@ -125,9 +137,10 @@ def "main"
   goto 0 0
   stretch "x" player_stretch_x
   direction dir
-  image github ++ "osl/assets/players/0.png".str 50 * screen_zoom
-  change 30 * screen_zoom
-  image github ++ "Items/Images/" ++ inventory.[current_slot] ++ ".png" 30
+  image github ++ "osl/assets/players/0.png".str 60 * screen_zoom
+  change smooth_dir.sin * 70 * screen_zoom smooth_dir.cos * 70 * screen_zoom
+  item = github ++ "Items/Images/" ++ inventory.[current_slot] ++ ".png" 
+  image item item.imageinfo("width") * 10 * screen_zoom
 endef
 
 def "render_ui"
@@ -169,9 +182,11 @@ endef
 new_game
 
 mainloop:
-
+screen_zoom = window_height / 80
+screen_zoom = screen_zoom.clamp(1,9) / 10
 main
 render_ui
 
 if mouse_down.not "can = true"
-import "win-buttons"
+loc 2 2 20 -20
+text "<player_x.round> <player_y.round> <fps> <screen_zoom>" 10 : c#fff
